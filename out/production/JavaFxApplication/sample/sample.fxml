@@ -12,7 +12,7 @@
     <children>
         <ImageView fx:id="imageLogo" fitHeight="180.0" fitWidth="180.0" layoutX="60.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../graphic/white_clear_background.png" backgroundLoading="true"/>
+            <Image url="@white_clear_background.png" backgroundLoading="true"/>
          </image></ImageView>
         <JFXTextField fx:id="textfUsername" focusColor="WHITE" layoutX="83.0" layoutY="231.0" promptText="Username" style="-fx-text-inner-color: #FFFFFF;" unFocusColor="#636363" />
         <JFXPasswordField fx:id="textfPassword" focusColor="WHITE" layoutX="83.0" layoutY="279.0" promptText="Password" style="-fx-text-inner-color: #FFFFFF;" unFocusColor="#636363" />

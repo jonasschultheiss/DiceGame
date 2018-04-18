@@ -13,11 +13,7 @@ public class LoginController
 
     public LoginController()
     {
-        // Check if Users Exist
-        IsUserexisting();
-    }
 
-    private void IsUserexisting()
-    {
     }
+    
 }

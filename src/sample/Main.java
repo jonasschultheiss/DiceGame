@@ -17,9 +17,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Forms/Login/Login.fxml"));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 300, 440));
+        Parent root = FXMLLoader.load(getClass().getResource("Forms/Form/Game/Game.fxml"));
+        primaryStage.setTitle("Game");
+        primaryStage.setScene(new Scene(root, 1024.0, 576.0));
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();

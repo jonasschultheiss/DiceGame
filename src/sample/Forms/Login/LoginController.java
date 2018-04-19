@@ -25,19 +25,19 @@ import java.io.IOException;
 public class LoginController
 {
     @FXML
-    ImageView imageLogo = null;
+    ImageView imageLogo;
     @FXML
-    JFXTextField textfUsername = null;
+    JFXTextField textfUsername;
     @FXML
-    JFXPasswordField textfPassword = null;
+    JFXPasswordField textfPassword;
     @FXML
-    JFXButton btnLogin = null;
+    JFXButton btnLogin;
     @FXML
-    JFXButton btnCreate = null;
+    JFXButton btnCreate;
     @FXML
-    JFXButton btnDevLogin = null;
+    JFXButton btnDevLogin;
     @FXML
-    ImageView imageExit = null;
+    ImageView imageExit;
     @FXML
     private AnchorPane rootPane;
 
@@ -45,6 +45,13 @@ public class LoginController
 
     public LoginController()
     {
+        imageLogo = new ImageView();
+        textfUsername = new JFXTextField();
+        textfPassword = new JFXPasswordField();
+        btnLogin = new JFXButton();
+        btnCreate = new JFXButton();
+        btnDevLogin = new JFXButton();
+        imageExit = new ImageView();
         se = new Serializer();
     }
 
@@ -75,10 +82,12 @@ public class LoginController
         Settings settings = se.deserializeSettings();
         UserDBO userDBO = se.deserializeUserDBO();
         settings.LoginMainUser(userDBO.GetUser("Developer"), userDBO.GetUser("Developer"));
+        se.serializeUserDBO(userDBO);
+        se.serializeSettings(settings);
+        LaunchApp();
     }
 
-    public void createClick(javafx.event.ActionEvent actionEvent)
-    {
+    public void createClick(javafx.event.ActionEvent actionEvent) throws IOException {
         UserDBO userDBO = se.deserializeUserDBO();
         if (userDBO.DoesUserExist(this.textfUsername.getText()))
         {
@@ -97,20 +106,24 @@ public class LoginController
             userDBO.UserList.add(new User(this.textfUsername.getText(), this.textfPassword.getText()));
             se.serializeUserDBO(userDBO);
             Settings settings = se.deserializeSettings();
-            settings.LoginMainUser();
+            settings.LoginMainUser(userDBO.GetUser(this.textfUsername.getText()), userDBO.GetUser("Developer"));
+            se.serializeSettings(settings);
+            se.serializeUserDBO(userDBO);
+            LaunchApp();
         }
     }
 
-    public void loginClick(javafx.event.ActionEvent actionEvent)
-    {
+    public void loginClick(javafx.event.ActionEvent actionEvent) throws IOException {
         Settings settings = se.deserializeSettings();
         UserDBO userDBO = se.deserializeUserDBO();
         if (userDBO.DoesPasswordMatch(this.textfUsername.getText(), this.textfPassword.getText()))
         {
             settings.LoginMainUser(userDBO.GetUser(this.textfUsername.getText()), userDBO.GetUser("Developer"));
+            se.serializeUserDBO(userDBO);
+            se.serializeSettings(settings);
+            LaunchApp();
         }
-        se.serializeUserDBO(userDBO);
-        se.serializeSettings(settings);
+
     }
 
     public void LaunchApp() throws IOException {

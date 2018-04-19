@@ -9,11 +9,11 @@
     <string>Password</string>
     <void method="set">
      <object idref="User0"/>
-     <string>123456</string>
+     <string>Bumpinthe212</string>
     </void>
    </void>
   </object>
-  <string>Computer</string>
+  <string>quest1onmark</string>
  </void>
 </void>
 <void class="sample.Model.UserDBO" id="Field0" method="getField">
@@ -26,7 +26,7 @@
      <string>Name</string>
      <void method="set">
       <object idref="User1"/>
-      <string>Developer</string>
+      <string>Computer</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
@@ -44,7 +44,7 @@
      <string>Name</string>
      <void method="set">
       <object idref="User2"/>
-      <string>ques1onmark</string>
+      <string>Developer</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
@@ -62,14 +62,32 @@
      <string>Name</string>
      <void method="set">
       <object idref="User3"/>
-      <string>quest1onmark</string>
+      <string>ques1onmark</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
      <string>Password</string>
      <void method="set">
       <object idref="User3"/>
-      <string>Bumpinthe212</string>
+      <string>123456</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="sample.Model.User" id="User4">
+    <void class="sample.Model.User" method="getField">
+     <string>Name</string>
+     <void method="set">
+      <object idref="User4"/>
+      <string>user</string>
+     </void>
+    </void>
+    <void class="sample.Model.User" method="getField">
+     <string>Password</string>
+     <void method="set">
+      <object idref="User4"/>
+      <string>123</string>
      </void>
     </void>
    </object>

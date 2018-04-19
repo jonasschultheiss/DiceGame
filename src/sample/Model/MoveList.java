@@ -26,5 +26,7 @@ public class MoveList
                 points += dice.eyes;
             }
         }
+
+        return points;
     }
 }

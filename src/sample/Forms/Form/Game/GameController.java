@@ -3,7 +3,9 @@ package sample.Forms.Form.Game;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -83,6 +85,8 @@ public class GameController
     }
 
     public void mouseHoverEnter(MouseEvent mouseEvent) {
+        Scene scene = imageExit.getScene();
+        scene.setCursor(Cursor.HAND);
     }
 
     public void mouseClickUsers(MouseEvent mouseEvent) {
@@ -91,7 +95,10 @@ public class GameController
     public void mouseClickSettings(MouseEvent mouseEvent) {
     }
 
-    public void mouseHoverLeft(MouseEvent mouseEvent) {
+    public void mouseHoverLeft(MouseEvent mouseEvent)
+    {
+        Scene scene = imageExit.getScene();
+        scene.setCursor(Cursor.DEFAULT);
     }
 
     public void mouseClickDebug(MouseEvent mouseEvent) {
@@ -110,6 +117,7 @@ public class GameController
 
     public void mouseClickExit(MouseEvent mouseEvent)
     {
-
+        Stage stage = (Stage) imageExit.getScene().getWindow();
+        stage.close();
     }
 }

@@ -1,4 +1,4 @@
-package sample;
+package sample.Forms.Login;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -7,11 +7,12 @@ import javafx.fxml.FXML;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 
-public class Controller
+public class LoginController
 {
     @FXML
     ImageView imageLogo = null;
@@ -20,16 +21,16 @@ public class Controller
     @FXML
     JFXPasswordField textfPassword = null;
     @FXML
-    JFXButton btnLoginCreateAccount = null;
+    JFXButton btnLogin = null;
+    @FXML
+    JFXButton btnCreate = null;
     @FXML
     JFXButton btnDevLogin = null;
-
     @FXML
     ImageView imageExit = null;
 
-    public Controller()
+    public LoginController()
     {
-
     }
 
     @FXML
@@ -55,11 +56,6 @@ public class Controller
 
     @FXML
     private void devLoginPressed()
-    {
-        ChangeFormToGame();
-    }
-
-    private void ChangeFormToGame()
     {
 
     }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="440.0" prefWidth="300.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Login.LoginController">
+<AnchorPane fx:id="rootPane" prefHeight="440.0" prefWidth="300.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Login.LoginController">
     <children>
         <ImageView fx:id="imageLogo" fitHeight="180.0" fitWidth="180.0" layoutX="60.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,7 +16,7 @@
          </image></ImageView>
       <ImageView fx:id="imageExit" fitHeight="25.0" fitWidth="25.0" layoutX="261.0" layoutY="14.0" onMouseClicked="#closeButtonAction" onMouseEntered="#closeButtonEnter" onMouseExited="#closeButtonLeave" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image backgroundLoading="true" url="@../../error.png" />
+            <Image url="@error.png" />
          </image>
       </ImageView>
         <JFXTextField fx:id="textfUsername" focusColor="WHITE" layoutX="83.0" layoutY="231.0" promptText="Username" style="-fx-text-inner-color: #FFFFFF;" unFocusColor="#636363" />

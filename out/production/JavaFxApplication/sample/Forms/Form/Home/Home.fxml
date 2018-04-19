@@ -2,6 +2,9 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
@@ -108,5 +111,12 @@
             <Font size="22.0" />
          </font>
       </Label>
+      <ImageView fx:id="imageExit" layoutX="985.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@error_dark.png" />
+         </image>
+         <effect>
+            <Blend />
+         </effect></ImageView>
    </children>
 </AnchorPane>

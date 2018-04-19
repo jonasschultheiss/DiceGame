@@ -3,49 +3,63 @@ package sample.Forms.Form.Home;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
 
 public class HomeController
 {
     @FXML
-    Label lblHome;
+    Label lblHome = null;
     @FXML
-    Label lblGame;
+    Label lblGame = null;
     @FXML
-    Label lblUsers;
+    Label lblUsers = null;
     @FXML
-    Label lblSettings;
+    Label lblSettings = null;
     @FXML
-    Label lblDebug;
+    Label lblDebug = null;
     @FXML
-    Label lblAbout;
+    Label lblAbout = null;
     @FXML
-    JFXButton btnLogOut;
+    JFXButton btnLogOut = null;
     @FXML
-    Label lblMatchesPlayed;
+    Label lblMatchesPlayed = null;
     @FXML
-    Label lblMatchesWon;
+    Label lblMatchesWon = null;
     @FXML
-    Label lblMatchesLost;
+    Label lblMatchesLost = null;
     @FXML
-    Label lblWinrate;
+    Label lblWinrate = null;
     @FXML
-    Label lblRecentMatch1;
+    Label lblRecentMatch1 = null;
     @FXML
-    Label lblRecentMatch2;
+    Label lblRecentMatch2 = null;
     @FXML
-    Label lblRecentMatch3;
+    Label lblRecentMatch3 = null;
     @FXML
-    Label lblRecentMatch4;
+    Label lblRecentMatch4 = null;
     @FXML
-    Label lblRecentMatch5;
+    Label lblRecentMatch5 = null;
     @FXML
     Label lblUserName = null;
+    @FXML
+    ImageView imageExit = null;
 
 
     public HomeController()
     {
+
+    }
+
+    @FXML
+    public void mouseClickExit()
+    {
+        Stage stage = (Stage) imageExit.getScene().getWindow();
+        stage.close();
 
     }
 
@@ -78,10 +92,16 @@ public class HomeController
     }
 
     @FXML
-    public void mouseHoverEnter(MouseEvent mouseEvent) {
+    public void mouseHoverEnter(MouseEvent mouseEvent)
+    {
+        Scene scene = imageExit.getScene();
+        scene.setCursor(Cursor.HAND);
     }
 
     @FXML
-    public void mouseHoverLeft(MouseEvent mouseEvent) {
+    public void mouseHoverLeft(MouseEvent mouseEvent)
+    {
+        Scene scene = imageExit.getScene();
+        scene.setCursor(Cursor.DEFAULT);
     }
 }

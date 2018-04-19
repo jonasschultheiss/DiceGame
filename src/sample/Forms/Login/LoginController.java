@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -62,6 +63,9 @@ public class LoginController
     @FXML
     private void devLoginPressed() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Form/Home/Home.fxml"));
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.setWidth(1024.0);
+        stage.setHeight(576.0);
         rootPane.getChildren().setAll(pane);
     }
 }

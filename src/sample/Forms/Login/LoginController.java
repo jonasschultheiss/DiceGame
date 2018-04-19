@@ -96,6 +96,8 @@ public class LoginController
         {
             userDBO.UserList.add(new User(this.textfUsername.getText(), this.textfPassword.getText()));
             se.serializeUserDBO(userDBO);
+            Settings settings = se.deserializeSettings();
+            settings.LoginMainUser();
         }
     }
 

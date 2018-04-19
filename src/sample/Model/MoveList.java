@@ -15,4 +15,16 @@ public class MoveList
     {
         this.moveList = _moveList;
     }
+
+    public int GetPoints()
+    {
+        int points = 0;
+        for (Move move : this.moveList)
+        {
+            for (Dice dice : move.dices)
+            {
+                points += dice.eyes;
+            }
+        }
+    }
 }

@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Forms.Form.Game.Game"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #636363;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Form.Home.HomeController">
+    <children>
+        <AnchorPane layoutX="34.0" layoutY="140.0" prefHeight="576.0" prefWidth="221.0" style="-fx-background-color: #3F3F3F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane layoutX="11.0" layoutY="31.0" prefHeight="91.0" prefWidth="221.0" style="-fx-background-color: #202020;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label fx:id="lblUserName" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="32.0" prefHeight="27.0" prefWidth="199.0" text="quest1onmark" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="32.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Pane layoutY="120.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #636363;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="10.0" onMouseClicked="#mouseClickHome" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Label fx:id="lblGame" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="190.0" onMouseClicked="#mouseClickGame" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Game" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblUsers" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="250.0" onMouseClicked="#mouseClickUsers" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Users" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblSettings" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="310.0" onMouseClicked="#mouseClickSettings" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Settings" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblDebug" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="370.0" onMouseClicked="#mouseClickDebug" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Debug" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblAbout" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="430.0" onMouseClicked="#mouseClickAbout" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="About" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="btnLogOut" layoutX="10.0" layoutY="480.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #202020;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="imageExit" layoutX="978.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@error_dark.png" />
+            </image>
+            <effect>
+                <Blend />
+            </effect></ImageView>
+    </children>
 </AnchorPane>

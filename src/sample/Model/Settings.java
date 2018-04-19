@@ -8,6 +8,8 @@ public class Settings
     public float OddsOfFour;
     public float OddsOfFive;
     public float OddsOfSix;
+    User LoggedInUser;
+    User SecondUser;
 
     public Settings()
     {
@@ -17,9 +19,12 @@ public class Settings
         this.OddsOfFour = 16.6f;
         this.OddsOfFive = 16.6f;
         this.OddsOfSix = 16.6f;
+        this.LoggedInUser = new User();
+        this.SecondUser = new User();
     }
 
-    public Settings(float one, float two, float three, float four, float five, float six)
+    public Settings(float one, float two, float three, float four, float five, float six, User _loggedInUser,
+                    User _secondUser)
     {
         this.OddsOfOne = one;
         this.OddsOfTwo = two;
@@ -27,6 +32,8 @@ public class Settings
         this.OddsOfFour = four;
         this.OddsOfFive = five;
         this.OddsOfSix = six;
+        this.LoggedInUser = _loggedInUser;
+        this.SecondUser = _secondUser;
     }
 
     public void ResetOdds()

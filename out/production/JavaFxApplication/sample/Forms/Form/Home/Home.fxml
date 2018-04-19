@@ -111,7 +111,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <ImageView fx:id="imageExit" layoutX="985.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageExit" layoutX="978.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@error_dark.png" />
          </image>

@@ -28,4 +28,14 @@ public class Settings
         this.OddsOfFive = five;
         this.OddsOfSix = six;
     }
+
+    public void ResetOdds()
+    {
+        this.OddsOfOne = 16.6f;
+        this.OddsOfTwo = 16.6f;
+        this.OddsOfThree = 16.6f;
+        this.OddsOfFour = 16.6f;
+        this.OddsOfFive = 16.6f;
+        this.OddsOfSix = 16.6f;
+    }
 }

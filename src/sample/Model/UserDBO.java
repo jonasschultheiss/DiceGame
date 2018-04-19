@@ -16,17 +16,7 @@ public class UserDBO
         this.UserList = _userList;
     }
 
-    public User GetUser(int _id)
-    {
-        for (User user : this.UserList)
-        {
-            if (user.ID == _id)
-            {
-                return user;
-            }
-        }
-        return new User();
-    }
+
 
     public User GetUser(String _name)
     {

@@ -7,8 +7,10 @@ import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
+import sample.Model.Serializer;
 
 public class HomeController
 {
@@ -52,7 +54,8 @@ public class HomeController
 
     public HomeController()
     {
-
+        Serializer serializer = new Serializer();
+        serializer.TestSerialize();
     }
 
     @FXML

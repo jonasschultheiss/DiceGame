@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sample.Model.Serializer;
 
 public class Main extends Application {
 
@@ -20,13 +21,12 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
-
         EnableDragDrop(root, primaryStage);
     }
 
     private void EnableDragDrop(Parent root, Stage primaryStage)
     {
-        root.setOnMousePressed(event -> {
+        root.setOnMousePressed(event > {
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
         });

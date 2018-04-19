@@ -2,14 +2,18 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #636363;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Form.Home.HomeController">
+<AnchorPane fx:id="RootPane" prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #636363;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Form.Game.GameController">
     <children>
         <AnchorPane layoutX="34.0" layoutY="140.0" prefHeight="576.0" prefWidth="221.0" style="-fx-background-color: #3F3F3F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -22,15 +26,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <Pane layoutY="120.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #636363;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                    <children>
-                        <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="10.0" onMouseClicked="#mouseClickHome" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Home" textAlignment="CENTER" textFill="WHITE">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </Pane>
+                <Pane layoutY="180.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #636363;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Label fx:id="lblGame" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="190.0" onMouseClicked="#mouseClickGame" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Game" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
@@ -57,6 +53,11 @@
                     </font>
                 </Label>
                 <JFXButton fx:id="btnLogOut" layoutX="10.0" layoutY="480.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #202020;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="130.0" onMouseClicked="#mouseClickHome" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="20.0" />
+                      </font>
+                  </Label>
             </children>
         </AnchorPane>
         <ImageView fx:id="imageExit" layoutX="978.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
@@ -66,5 +67,64 @@
             <effect>
                 <Blend />
             </effect></ImageView>
+      <Label fx:id="lblLoggedInUser" layoutX="408.0" layoutY="68.0" text="LoggedInUser" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="584.0" layoutY="68.0" text="VS" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSecondUser" layoutX="679.0" layoutY="68.0" text="SecondUser" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="270.0" layoutX="506.0" layoutY="101.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="595.0" layoutY="143.0" startX="-100.0" stroke="WHITE" />
+      <Label fx:id="lblScore" layoutX="577.0" layoutY="113.0" text="0 - 0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="250.0" layoutX="521.0" layoutY="319.0" rotate="90.0" startX="-100.0" stroke="WHITE" />
+      <ScrollPane layoutX="269.0" layoutY="176.0" prefHeight="251.0" prefWidth="308.0">
+         <content>
+            <TableView fx:id="tvLeft" prefHeight="249.0" prefWidth="306.0">
+              <columns>
+                <TableColumn fx:id="tvcLeft1" editable="false" prefWidth="75.0" sortable="false" text="1" />
+                <TableColumn fx:id="tvcLeft2" editable="false" prefWidth="38.0" sortable="false" text="2" />
+                  <TableColumn fx:id="tvcLeft3" editable="false" prefWidth="75.0" sortable="false" text="3" />
+                  <TableColumn fx:id="tvcLeft4" editable="false" prefWidth="75.0" sortable="false" text="4" />
+                  <TableColumn fx:id="tvcLeft5" editable="false" prefWidth="75.0" sortable="false" text="5" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="btnRollLeft" layoutX="272.0" layoutY="465.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="136.0" style="-fx-background-color: #3f3f3f;" text="Roll again" textFill="WHITE" />
+      <JFXButton fx:id="btnPassLeft" layoutX="427.0" layoutY="465.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #3f3f3f;" text="Pass" textFill="WHITE" />
+      <JFXButton fx:id="btnRollRight" layoutX="614.0" layoutY="465.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="136.0" style="-fx-background-color: #3f3f3f;" text="Roll again" textFill="WHITE" />
+      <JFXButton fx:id="btnPassRight" layoutX="768.0" layoutY="465.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #3f3f3f;" text="Pass" textFill="WHITE" />
+      <ScrollPane layoutX="614.0" layoutY="176.0" prefHeight="251.0" prefWidth="308.0">
+         <content>
+            <TableView fx:id="tvRight" prefHeight="249.0" prefWidth="306.0">
+               <columns>
+                  <TableColumn fx:id="tvcRight1" editable="false" prefWidth="75.0" sortable="false" text="1" />
+                  <TableColumn fx:id="tvcRight2" editable="false" prefWidth="38.0" sortable="false" text="2" />
+                  <TableColumn fx:id="tvcRight3" editable="false" prefWidth="75.0" sortable="false" text="3" />
+                  <TableColumn fx:id="tvcRight4" editable="false" prefWidth="75.0" sortable="false" text="4" />
+                  <TableColumn fx:id="tvcRight5" editable="false" prefWidth="75.0" sortable="false" text="5" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>

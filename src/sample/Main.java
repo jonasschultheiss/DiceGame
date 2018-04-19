@@ -26,7 +26,7 @@ public class Main extends Application {
 
     private void EnableDragDrop(Parent root, Stage primaryStage)
     {
-        root.setOnMousePressed(event > {
+        root.setOnMousePressed(event -> {
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
         });

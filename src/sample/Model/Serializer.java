@@ -4,14 +4,12 @@ import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 
 import java.beans.ExceptionListener;
 import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
 public class Serializer
 {
-    private static final String SERIALIZED_FILE_NAME="settings.xml";
+    private static final String SERIALIZED_FILE_NAME="userDBO.xml";
 
     XMLSerializer serializer;
 
@@ -22,20 +20,28 @@ public class Serializer
 
 
 
-    public void TestSerialize() {
+    public void TestSerialize(){
         UserDBO userDBO = new UserDBO();
         userDBO.UserList.add(new User("ques1onmark", "123456"));
         userDBO.UserList.add(new User("Computer", "123456"));
         userDBO.UserList.add(new User("Developer", "123456"));
+        serializeToXML(userDBO);
+    }
 
-        XMLEncoder encoder  = null;
+    private void serializeToXML (UserDBO userDBO)  {
+        ArrayList<String> al=new ArrayList<String>();
+        al.add("Hello");
+        al.add("Hi");
+        al.add("Howdy");
+
         try{
-            encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream(SERIALIZED_FILE_NAME)));
-        }catch(FileNotFoundException fileNotFound){
-            System.out.println("ERROR: While Creating or Opening the File dvd.xml");
+            FileOutputStream fos= new FileOutputStream("myfile");
+            ObjectOutputStream oos= new ObjectOutputStream(fos);
+            oos.writeObject(al);
+            oos.close();
+            fos.close();
+        }catch(IOException ioe){
+            ioe.printStackTrace();
         }
-        encoder.writeObject(userDBO);
-        encoder.close();
-
     }
 }

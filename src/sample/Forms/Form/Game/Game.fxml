@@ -22,15 +22,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <Pane layoutY="120.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #636363;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                    <children>
-                        <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="10.0" onMouseClicked="#mouseClickHome" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Home" textAlignment="CENTER" textFill="WHITE">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </Pane>
+                <Pane layoutY="180.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #636363;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Label fx:id="lblGame" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="190.0" onMouseClicked="#mouseClickGame" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Game" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
@@ -57,6 +49,11 @@
                     </font>
                 </Label>
                 <JFXButton fx:id="btnLogOut" layoutX="10.0" layoutY="480.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #202020;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="130.0" onMouseClicked="#mouseClickHome" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" prefHeight="27.0" prefWidth="199.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="20.0" />
+                      </font>
+                  </Label>
             </children>
         </AnchorPane>
         <ImageView fx:id="imageExit" layoutX="978.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">

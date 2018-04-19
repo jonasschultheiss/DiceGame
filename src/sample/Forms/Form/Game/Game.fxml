@@ -7,7 +7,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #636363;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forms.Form.Home.HomeController">
@@ -60,58 +59,7 @@
                 <JFXButton fx:id="btnLogOut" layoutX="10.0" layoutY="480.0" onAction="#btnLogOutClick" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #202020;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
             </children>
         </AnchorPane>
-        <Label layoutX="281.0" layoutY="90.0" prefHeight="32.0" prefWidth="342.0" text="Good morning User" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblMatchesPlayed" layoutX="282.0" layoutY="149.0" prefHeight="20.0" prefWidth="145.0" text="14 matches played" textFill="WHITE">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblMatchesWon" layoutX="427.0" layoutY="149.0" prefHeight="20.0" prefWidth="145.0" text="8 matches won" textFill="WHITE">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblMatchesLost" layoutX="572.0" layoutY="149.0" prefHeight="20.0" prefWidth="145.0" text="6 matches lost" textFill="WHITE">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblWinrate" layoutX="717.0" layoutY="149.0" prefHeight="20.0" prefWidth="95.0" text="1.3 Winrate" textFill="WHITE">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Line endX="550.0" layoutX="382.0" layoutY="180.0" startX="-100.0" stroke="WHITE" />
-        <Label fx:id="lblRecentMatch1" layoutX="314.0" layoutY="210.0" prefHeight="17.0" prefWidth="592.0" text="[19.4.2018 02:34] Won against Asterix (100:99)" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblRecentMatch2" layoutX="314.0" layoutY="260.0" prefHeight="17.0" prefWidth="592.0" text="[19.4.2018 02:34] Won against Asterix (100:99)" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblRecentMatch3" layoutX="314.0" layoutY="310.0" prefHeight="17.0" prefWidth="592.0" text="[19.4.2018 02:34] Won against Asterix (100:99)" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblRecentMatch4" layoutX="314.0" layoutY="360.0" prefHeight="17.0" prefWidth="592.0" text="[19.4.2018 02:34] Won against Asterix (100:99)" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <Label fx:id="lblRecentMatch5" layoutX="314.0" layoutY="416.0" prefHeight="17.0" prefWidth="592.0" text="[19.4.2018 02:34] Won against Asterix (100:99)" textFill="WHITE">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <ImageView fx:id="imageExit" layoutX="985.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="imageExit" layoutX="978.0" layoutY="14.0" onMouseClicked="#mouseClickExit" onMouseEntered="#mouseHoverEnter" onMouseExited="#mouseHoverLeft" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@error_dark.png" />
             </image>

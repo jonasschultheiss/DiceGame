@@ -8,8 +8,8 @@ public class Settings
     public float OddsOfFour;
     public float OddsOfFive;
     public float OddsOfSix;
-    User LoggedInUser;
-    User SecondUser;
+    public User LoggedInUser;
+    public User SecondUser;
 
     public Settings()
     {
@@ -34,6 +34,12 @@ public class Settings
         this.OddsOfSix = six;
         this.LoggedInUser = _loggedInUser;
         this.SecondUser = _secondUser;
+    }
+
+    public void LoginMainUser(User mainUser, User secondUser)
+    {
+        this.LoggedInUser = mainUser;
+        this.SecondUser = secondUser;
     }
 
     public void ResetOdds()

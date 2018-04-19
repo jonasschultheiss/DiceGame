@@ -13,7 +13,7 @@
     </void>
    </void>
   </object>
-  <string>ques1onmark</string>
+  <string>Computer</string>
  </void>
 </void>
 <void class="sample.Model.UserDBO" id="Field0" method="getField">
@@ -26,7 +26,7 @@
      <string>Name</string>
      <void method="set">
       <object idref="User1"/>
-      <string>Computer</string>
+      <string>Developer</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
@@ -44,7 +44,7 @@
      <string>Name</string>
      <void method="set">
       <object idref="User2"/>
-      <string>Developer</string>
+      <string>ques1onmark</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
@@ -52,6 +52,24 @@
      <void method="set">
       <object idref="User2"/>
       <string>123456</string>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="sample.Model.User" id="User3">
+    <void class="sample.Model.User" method="getField">
+     <string>Name</string>
+     <void method="set">
+      <object idref="User3"/>
+      <string>quest1onmark</string>
+     </void>
+    </void>
+    <void class="sample.Model.User" method="getField">
+     <string>Password</string>
+     <void method="set">
+      <object idref="User3"/>
+      <string>Bumpinthe212</string>
      </void>
     </void>
    </object>

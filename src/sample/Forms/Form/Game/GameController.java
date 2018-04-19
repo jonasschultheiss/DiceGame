@@ -1,12 +1,16 @@
 package sample.Forms.Form.Game;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class GameController
 {
@@ -71,5 +75,41 @@ public class GameController
 
     public GameController()
     {
+    }
+
+    public void mouseClickGame(MouseEvent mouseEvent)
+    {
+
+    }
+
+    public void mouseHoverEnter(MouseEvent mouseEvent) {
+    }
+
+    public void mouseClickUsers(MouseEvent mouseEvent) {
+    }
+
+    public void mouseClickSettings(MouseEvent mouseEvent) {
+    }
+
+    public void mouseHoverLeft(MouseEvent mouseEvent) {
+    }
+
+    public void mouseClickDebug(MouseEvent mouseEvent) {
+    }
+
+    public void mouseClickAbout(MouseEvent mouseEvent) {
+    }
+
+    public void mouseClickHome(MouseEvent mouseEvent) {
+    }
+
+    public void btnLogOutClick(ActionEvent actionEvent)
+    {
+
+    }
+
+    public void mouseClickExit(MouseEvent mouseEvent)
+    {
+
     }
 }

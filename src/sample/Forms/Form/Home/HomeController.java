@@ -3,6 +3,7 @@ package sample.Forms.Form.Home;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -11,9 +12,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import sample.Model.Serializer;
+import sample.Model.Settings;
+
+import java.io.IOException;
 
 public class HomeController
 {
+    @FXML
+    public AnchorPane RootPane;
     @FXML
     Label lblHome = null;
     @FXML
@@ -50,12 +56,13 @@ public class HomeController
     Label lblUserName = null;
     @FXML
     ImageView imageExit = null;
-
+    Serializer se;
 
     public HomeController()
     {
-        Serializer serializer = new Serializer();
-        serializer.TestSerialize();
+        se = new Serializer();
+        Settings settings = se.deserializeSettings();
+        this.lblUserName.setText(settings.LoggedInUser.Name);
     }
 
     @FXML
@@ -71,7 +78,12 @@ public class HomeController
     }
 
     @FXML
-    public void mouseClickGame(MouseEvent mouseEvent) {
+    public void mouseClickGame(MouseEvent mouseEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Game/Game.fxml"));
+        Stage stage = (Stage) RootPane.getScene().getWindow();
+        stage.setWidth(1024.0);
+        stage.setHeight(576.0);
+        RootPane.getChildren().setAll(pane);
     }
 
     @FXML

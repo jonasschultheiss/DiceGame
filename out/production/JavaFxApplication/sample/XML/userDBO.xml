@@ -13,6 +13,21 @@
     </void>
    </void>
   </object>
+  <string>Developer</string>
+ </void>
+</void>
+<void class="sample.Model.User" method="getField">
+ <string>Name</string>
+ <void method="set">
+  <object class="sample.Model.User" id="User1">
+   <void class="sample.Model.User" method="getField">
+    <string>Password</string>
+    <void method="set">
+     <object idref="User1"/>
+     <string>123456</string>
+    </void>
+   </void>
+  </object>
   <string>ques1onmark</string>
  </void>
 </void>
@@ -21,30 +36,12 @@
  <void id="ArrayList0" method="get">
   <object idref="UserDBO0"/>
   <void method="add">
-   <object class="sample.Model.User" id="User1">
-    <void class="sample.Model.User" method="getField">
-     <string>Name</string>
-     <void method="set">
-      <object idref="User1"/>
-      <string>Computer</string>
-     </void>
-    </void>
-    <void class="sample.Model.User" method="getField">
-     <string>Password</string>
-     <void method="set">
-      <object idref="User1"/>
-      <string>123456</string>
-     </void>
-    </void>
-   </object>
-  </void>
-  <void method="add">
    <object class="sample.Model.User" id="User2">
     <void class="sample.Model.User" method="getField">
      <string>Name</string>
      <void method="set">
       <object idref="User2"/>
-      <string>Developer</string>
+      <string>Computer</string>
      </void>
     </void>
     <void class="sample.Model.User" method="getField">
@@ -58,6 +55,9 @@
   </void>
   <void method="add">
    <object idref="User0"/>
+  </void>
+  <void method="add">
+   <object idref="User1"/>
   </void>
  </void>
 </void>

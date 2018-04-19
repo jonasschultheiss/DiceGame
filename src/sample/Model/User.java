@@ -6,7 +6,7 @@ public class User
 {
     public String Name;
     public String Password;
-    ArrayList<Match> Matches;
+    public ArrayList<Match> Matches;
 
     public User()
     {

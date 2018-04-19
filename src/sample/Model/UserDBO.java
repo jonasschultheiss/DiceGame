@@ -1,10 +1,13 @@
 package sample.Model;
 
+import com.sun.xml.internal.ws.developer.Serialization;
+
 import java.util.ArrayList;
 
 public class UserDBO
 {
-    ArrayList<User> UserList;
+
+    public ArrayList<User> UserList;
 
     public UserDBO()
     {
@@ -45,5 +48,19 @@ public class UserDBO
         }
 
         return isPasswordRight;
+    }
+
+    public boolean DoesUserExist(String _name)
+    {
+        boolean IsUserExisting = false;
+        for (User user : this.UserList)
+        {
+            if (user.Name.equals(_name))
+            {
+                IsUserExisting = true;
+            }
+        }
+
+        return IsUserExisting;
     }
 }
